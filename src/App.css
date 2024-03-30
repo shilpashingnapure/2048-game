@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #faf8ef;
+  color: #776e65;
+  font-size: 18px;
+  gap:30px;
+}
+.board{
+  position: relative;
+}
+.game-over{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 102%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  background-color: rgb(238,228, 218 , .73);
+
+}
+.hide{
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
+button , .btn{
+  background-color: #8f7a66;
+  padding:10px 20px;
+  border:none;
+  border-radius:4px;
+  color : #fff;
+  font-size: 20px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color:  #bcaca0;
+  gap:5px;
+  margin-bottom: -7px;
+  border-radius: 4px;
+}
+.box > div{
+  border: 3px solid #bcaca0;
+  width: 100px;
+  height: 100px;
+  flex:1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+.empty-cell{
+  background-color: #ccc1b4;
+}
+
+.tile{
+  font-size: 45px;
+  color: #fff;
+  font-weight: bold;
+  animation: zoom .1s ease-in;
+}
+@keyframes zoom{
+  0%{
+    transform: scale(0.8);
+    opacity: .4;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.tile-1{
+  background-color: #eee4da;
+  color: #776e65;
+  
+}
+.tile-2{
+  background-color: #eee1ca;
+  color: #776e65;
+}
+.tile-3{
+  background-color: #f3b37a;
+}
+.tile-4{
+  background-color: #f69564;
+}
+.tile-5{
+  background-color: #f77c5f;
+
+}
+.tile-6{
+  background-color: #f75f3c;
+}
+.tile-7{
+  background: #edd073;
+}
+.tile-8{
+  background-color: #edcc62;
+}
+
+
+.setting-container{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50% , -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  width: 500px;
+  height: 400px;
+  padding:20px 30px;
+
+}
+
+.btns{
+  display: flex;
+  gap:20px;
+}
+
+.form{
+  margin-bottom: 50px;
+}
+
+.input-field{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.input-field input{
+  width: 40px;
+  padding:8px 15px;
+  text-align: center;
 }
