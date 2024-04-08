@@ -24,7 +24,6 @@ export class SlideTile{
             if(curr != null && prev != null && curr == prev){
                 board[i][j-1] += curr;
                 board[i][j] = null;
-
             }
            }
 
